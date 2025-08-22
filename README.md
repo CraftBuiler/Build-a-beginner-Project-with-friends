@@ -1,2 +1,2 @@
-# Build-a-beginner-Project-with-friends
-Learn to work with others by building a project
+# Build a project and showcase your agility
+You will learn how to implement agile scrum methodology through this project
