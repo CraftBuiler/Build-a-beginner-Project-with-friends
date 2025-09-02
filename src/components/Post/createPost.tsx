@@ -1,3 +1,3 @@
 export const PostCreate = () => {
-  return <div></div>;
-};
+    return <div></div>
+}

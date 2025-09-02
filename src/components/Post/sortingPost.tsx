@@ -1,3 +1,3 @@
 export const PostSorting = () => {
-  return <div></div>;
-};
+    return <div></div>
+}

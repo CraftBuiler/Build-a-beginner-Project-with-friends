@@ -1,3 +1,3 @@
 export const PostFilter = () => {
-  return <div></div>;
-};
+    return <div></div>
+}
