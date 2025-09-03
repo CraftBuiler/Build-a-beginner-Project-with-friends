@@ -16,6 +16,7 @@ import {
     FormLabel,
     FormMessage,
 } from '@/components/ui/form'
+import type { CheckedState } from '@radix-ui/react-checkbox'
 
 const items = [
     {
@@ -104,7 +105,7 @@ export function CheckboxReactHookFormMultiple() {
                                                             item.id
                                                         )}
                                                         onCheckedChange={(
-                                                            checked
+                                                            checked: CheckedState
                                                         ) => {
                                                             return checked
                                                                 ? field.onChange(

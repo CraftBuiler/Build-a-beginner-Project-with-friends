@@ -1,13 +1,15 @@
 import { PostCreate } from './createPost'
 import { PostFilter } from './filterPost'
+import { PostList } from './listPosts'
 import { PostSorting } from './sortingPost'
 
 export const Post = () => {
     return (
         <div>
-            <PostCreate></PostCreate>
-            <PostFilter></PostFilter>
-            <PostSorting></PostSorting>
+            <PostCreate />
+            <PostFilter />
+            <PostSorting />
+            <PostList />
         </div>
     )
 }
