@@ -11,4 +11,7 @@ export default defineConfig({
             '@': path.resolve(__dirname, './src'),
         },
     },
+    server: {
+        allowedHosts: ['go-no-go-651638817124.us-central1.run.app'],
+    },
 })
