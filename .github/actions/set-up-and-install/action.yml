@@ -2,7 +2,7 @@ name: Install and test
 description: Set up Node.js environment, install dependencies, and run tests.
 
 runs:
-  using: composite
+  using: "composite"
   steps:
       - uses: actions/checkout@v4
       - name: Setup Node
