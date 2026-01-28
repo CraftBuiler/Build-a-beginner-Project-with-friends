@@ -18,7 +18,6 @@ jobs:
     name: Unit Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - uses: ./.github/actions/set-up-and-install
       - run: npm ci
 
