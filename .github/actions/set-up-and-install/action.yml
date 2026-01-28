@@ -1,12 +1,11 @@
-name: Install and test
-description: Set up Node.js environment, install dependencies, and run tests.
-
+# .github/actions/setup-node-and-install/action.yml
+name: 'Setup and Install'
+description: 'Check out code, set up Node, and install dependencies'
 runs:
   using: "composite"
   steps:
     - uses: actions/checkout@v4
-    - name: Setup Node
-      uses: actions/setup-node@v4
+    - uses: actions/setup-node@v4
       with:
         node-version: "22"
         cache: "npm"
