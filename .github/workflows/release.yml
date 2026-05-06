@@ -32,13 +32,9 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-        # Change this from "Version Packages" to a Conventional Commit format
           commit: "chore: version packages"
           title: "chore: version packages"
-          # This creates the "Version Packages" PR
           version: npx changeset version
-          # This runs ONLY after you merge the "Version Packages" PR.
-          # It creates the Git Tag and the GitHub Release automatically.
           publish: npx changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
