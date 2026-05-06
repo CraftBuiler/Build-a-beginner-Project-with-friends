@@ -4,4 +4,8 @@
 
 ### Minor Changes
 
-- f0d501b: add auto changelogs
+-   f0d501b: add auto changelogs
+
+### Patch Changes
+
+-   refactor: remove depreacated tsconfig
