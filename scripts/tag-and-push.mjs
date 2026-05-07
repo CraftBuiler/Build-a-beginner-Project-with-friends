@@ -6,7 +6,6 @@ const tag = `v${pkg.version}`
 
 const run = (cmd) => execSync(cmd, { stdio: 'inherit' })
 
-// Check if tag already exists remotely
 try {
     execSync(`git ls-remote --tags origin ${tag}`, { stdio: 'pipe' })
     const existing = execSync(`git ls-remote --tags origin ${tag}`, {
@@ -19,7 +18,6 @@ try {
     }
 } catch (_) {}
 
-// Create and push tag
 run(`git tag ${tag}`)
 run(`git push origin ${tag}`)
 
