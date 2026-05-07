@@ -4,7 +4,11 @@
 
 ### Patch Changes
 
-- gefe (by [@ThierryRakotomanana](https://github.com/ThierryRakotomanana) in [`857d393`](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/commit/857d393af64c4b5eedc999b03c02250548f6d22d))
+<<<<<<< Updated upstream
+
+- # gefe (by [@ThierryRakotomanana](https://github.com/ThierryRakotomanana) in [`857d393`](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/commit/857d393af64c4b5eedc999b03c02250548f6d22d))
+- gefe
+    > > > > > > > Stashed changes
 
 ## 2.1.0
 

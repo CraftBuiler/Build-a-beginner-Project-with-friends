@@ -10,7 +10,9 @@
         "lint:check": "eslint . --check",
         "preview": "vite preview",
         "format": "prettier . --write",
-        "prepare": "husky"
+        "prepare": "husky",
+        "version": "changeset version",
+        "release": "changeset tag && git push --follow-tags"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": "eslint --fix",
