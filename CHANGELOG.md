@@ -1,5 +1,15 @@
 # react-template
 
+## 2.2.0
+
+### Minor Changes
+
+- [#30](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/pull/30) [`1812c2a`](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/commit/1812c2a2d11ca35d0deebfd69a4f9f12ee67fcab) Thanks [@CraftBuiler](https://github.com/CraftBuiler)! - feat: new release
+
+### Patch Changes
+
+- [#30](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/pull/30) [`2144b36`](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/commit/2144b36529f7596be7000615f0e2d0aac997424f) Thanks [@CraftBuiler](https://github.com/CraftBuiler)! - fix: some release
+
 ## 2.1.4
 
 ### Patch Changes
