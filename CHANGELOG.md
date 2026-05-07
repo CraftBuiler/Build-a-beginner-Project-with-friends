@@ -1,5 +1,17 @@
 # react-template
 
+## 2.1.0
+
+### Minor Changes
+
+- change (by [@ThierryRakotomanana](https://github.com/ThierryRakotomanana) in [`4d04b3c`](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/commit/4d04b3c1add6260f06c695929fe1f7a868182197))
+
+### Patch Changes
+
+- patch here we can go (by [@ThierryRakotomanana](https://github.com/ThierryRakotomanana) in [`6a17bab`](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/commit/6a17babccb0556691e242c4b37545b69587c9e7a))
+
+- create things (by [@ThierryRakotomanana](https://github.com/ThierryRakotomanana) in [`378be1c`](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/commit/378be1cb502de2ea5a12924b4b3bbe516590091e))
+
 ## 2.0.1
 
 ### Patch Changes
