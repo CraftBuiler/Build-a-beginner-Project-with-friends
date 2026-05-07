@@ -1,5 +1,11 @@
 # react-template
 
+## 1.1.1
+
+### Patch Changes
+
+- release (by [@ThierryRakotomanana](https://github.com/ThierryRakotomanana) in [`dc29ca1`](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/commit/dc29ca1395206902982c5e73c6915aee6b497797))
+
 ## 1.1.0
 
 ### Minor Changes
