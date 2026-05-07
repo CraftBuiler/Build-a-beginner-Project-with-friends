@@ -1,5 +1,11 @@
 # react-template
 
+## 2.0.0
+
+### Major Changes
+
+- feat: automatic release (by [@ThierryRakotomanana](https://github.com/ThierryRakotomanana) in [`9f3d852`](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/commit/9f3d852424ed953cb8c9e76104f80835b22b95a2))
+
 ## 1.1.3
 
 ### Patch Changes
