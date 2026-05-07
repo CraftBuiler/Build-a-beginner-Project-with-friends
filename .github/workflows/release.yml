@@ -31,10 +31,10 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          commit: "chore: version packages"
-          title: "chore: version packages"
           version: npx @changesets/cli version
           publish: npx @changesets/cli tag
+          commit: "chore: version packages"
+          title: "chore: version packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           

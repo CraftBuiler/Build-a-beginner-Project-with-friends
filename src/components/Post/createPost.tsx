@@ -26,15 +26,6 @@ export const PostCreate = () => {
                 <form>
                     <div className="flex flex-col gap-6">
                         <div className="grid gap-2">
-                            <label htmlFor="email">Email</label>
-                            <Input
-                                id="email"
-                                type="email"
-                                placeholder="m@example.com"
-                                required
-                            />
-                        </div>
-                        <div className="grid gap-2">
                             <div className="flex items-center">
                                 <label htmlFor="password">Password</label>
                                 <a
@@ -49,14 +40,7 @@ export const PostCreate = () => {
                     </div>
                 </form>
             </CardContent>
-            <CardFooter className="flex-col gap-2">
-                <Button type="submit" className="w-full">
-                    Login
-                </Button>
-                <Button variant="outline" className="w-full">
-                    Login with Google
-                </Button>
-            </CardFooter>
+            <CardFooter className="flex-col gap-2"></CardFooter>
         </Card>
     )
 }
