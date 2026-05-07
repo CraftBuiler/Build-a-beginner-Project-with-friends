@@ -28,25 +28,28 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
-      - name: Create Release PR or Apply Versions + Tag
+        
+      - name: Create Release PR or Tag
         id: changesets
         uses: changesets/action@v1
         with:
-          version: npm run version        # bumps package.json + updates CHANGELOG.md
-          publish: npm run release        # runs changeset tag + git push --tags
+          version: npm run version
+          publish: npm run release   # just: changeset tag && git push --follow-tags
           commit: "chore: version packages"
           title: "chore: version packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Only runs when the "Version Packages" PR was merged (publish step ran)
+      - name: Get version
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        id: pkg
+        run: echo "tag=v$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+
       - name: Create GitHub Release
-        if: steps.changesets.outputs.published == 'true'
+        if: steps.changesets.outputs.hasChangesets == 'false'
         uses: softprops/action-gh-release@v2
         with:
-          # Read the tag from publishedPackages, with a fallback
-          tag_name: ${{ fromJson(steps.changesets.outputs.publishedPackages)[0].version && format('v{0}', fromJson(steps.changesets.outputs.publishedPackages)[0].version) }}
-          body_path: CHANGELOG.md          # use your actual changelog, not auto-generated
+          tag_name: ${{ steps.pkg.outputs.tag }}
+          body_path: CHANGELOG.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
