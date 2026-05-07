@@ -35,6 +35,6 @@ jobs:
           commit: "chore: version packages"
           title: "chore: version packages"
           version: npx changeset version
-          publish: npx changeset publish
+          publish: npx changeset tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
