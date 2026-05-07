@@ -16,7 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          # Very important: Fetch all history so tags can be compared
           fetch-depth: 0
 
       - name: Setup Node
@@ -38,15 +37,13 @@ jobs:
           publish: npx @changesets/cli tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
+          
       - name: Push Tags
         if: steps.changesets.outputs.published == 'true' || contains(github.event.head_commit.message, 'chore: version packages')
         run: git push --tags
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
-      # This is the missing piece that creates the GitHub Release entry
       - name: Create GitHub Release
         if: |
           steps.changesets.outputs.published == 'true' || 
@@ -54,7 +51,6 @@ jobs:
           (github.event_name == 'push' && contains(github.event.head_commit.message, 'chore: version packages'))
         uses: softprops/action-gh-release@v2
         with:
-          # This automatically finds the tag created by the previous step
           generate_release_notes: true 
           tag_name: ${{ steps.changesets.outputs.publishedPackages[0].tag }}
         env:
