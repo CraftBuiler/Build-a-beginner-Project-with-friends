@@ -1,5 +1,17 @@
 # react-template
 
+## 1.1.0
+
+### Minor Changes
+
+- 3c271d5: feat: add username to the change he made
+
+### Patch Changes
+
+- 0b15711: here we delete directory as it's no need
+- abe5d38: fix
+- ebf9a4c: repos owner
+
 ## 1.0.1
 
 ### Patch Changes
