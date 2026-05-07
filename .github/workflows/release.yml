@@ -38,6 +38,13 @@ jobs:
           publish: npx @changesets/cli tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+      - name: Push Tags
+        if: steps.changesets.outputs.published == 'true' || contains(github.event.head_commit.message, 'chore: version packages')
+        run: git push --tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       # This is the missing piece that creates the GitHub Release entry
       - name: Create GitHub Release
@@ -49,5 +56,6 @@ jobs:
         with:
           # This automatically finds the tag created by the previous step
           generate_release_notes: true 
+          tag_name: ${{ steps.changesets.outputs.publishedPackages[0].tag }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
