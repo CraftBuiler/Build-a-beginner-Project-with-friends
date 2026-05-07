@@ -1,5 +1,11 @@
 # react-template
 
+## 2.0.1
+
+### Patch Changes
+
+- add a logic to handle release github (by [@ThierryRakotomanana](https://github.com/ThierryRakotomanana) in [`8916474`](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/commit/8916474fbbcf001c806d719f79a84a624928dc49))
+
 ## 2.0.0
 
 ### Major Changes
