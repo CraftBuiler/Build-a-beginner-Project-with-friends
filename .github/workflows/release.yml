@@ -39,7 +39,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Push Tags
-        if: steps.changesets.outputs.published == 'true' || contains(github.event.head_commit.message, 'chore: version packages')
+        if: |
+          steps.changesets.outputs.published == 'true' || 
+          contains(github.event.head_commit.message, 'chore: version packages')
         run: git push --tags
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
