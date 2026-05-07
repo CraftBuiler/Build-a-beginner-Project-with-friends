@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@3.1.4/schema.json",
-  "changelog": ["./changelog-generator.mjs", { "repo": "CraftBuiler/Build-a-beginner-Project-with-friends" }],
+  "changelog": ["@changesets/changelog-github", { "repo": "CraftBuiler/Build-a-beginner-Project-with-friends" }],
   "commit": false,
   "fixed": [],
   "linked": [],
