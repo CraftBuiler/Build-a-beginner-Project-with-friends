@@ -1,5 +1,11 @@
 # react-template
 
+## 2.1.2
+
+### Patch Changes
+
+- this is a pach
+
 ## 2.1.1
 
 ### Patch Changes
