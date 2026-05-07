@@ -1,5 +1,11 @@
 # react-template
 
+## 2.1.3
+
+### Patch Changes
+
+- feat: add it
+
 ## 2.1.2
 
 ### Patch Changes
