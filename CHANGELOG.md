@@ -1,5 +1,11 @@
 # react-template
 
+## 2.1.4
+
+### Patch Changes
+
+- [`974721c`](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/commit/974721c02339b5109ed294f45cef87f0c89369aa) Thanks [@ThierryRakotomanana](https://github.com/ThierryRakotomanana)! - fix: add verbatin changelog
+
 ## 2.1.3
 
 ### Patch Changes
