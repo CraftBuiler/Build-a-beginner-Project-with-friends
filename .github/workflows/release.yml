@@ -1,55 +1,38 @@
-name: "Automatic Release & Changelog"
-
-permissions:
-  contents: write
-  pull-requests: write
+name: Release
 
 on:
   push:
     branches:
       - main
 
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          # Required: allows the action to push commits/tags
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'npm'
+          cache: "npm"
 
       - name: Install dependencies
-        run: npm install
-        
-      - name: Create Release PR or Tag
+        run: npm ci
+
+      - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
         with:
-          version: npm run version
-          publish: npm run release   # just: changeset tag && git push --follow-tags
-          commit: "chore: version packages"
+          publish: npm run release
           title: "chore: version packages"
+          commit: "chore: version packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Get version
-        if: steps.changesets.outputs.hasChangesets == 'false'
-        id: pkg
-        run: echo "tag=v$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
-
-      - name: Create GitHub Release
-        if: steps.changesets.outputs.hasChangesets == 'false'
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ steps.pkg.outputs.tag }}
-          body_path: CHANGELOG.md
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}  
