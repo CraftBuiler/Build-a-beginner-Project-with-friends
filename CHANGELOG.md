@@ -1,5 +1,11 @@
 # react-template
 
+## 2.3.2
+
+### Patch Changes
+
+- [`f77008f`](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/commit/f77008f2afb40e0f830b1825af2c2e34052c9f4e) Thanks [@ThierryRakotomanana](https://github.com/ThierryRakotomanana)! - He made : - fix : ci release doesn't published automatically
+
 ## 2.3.1
 
 ### Patch Changes
