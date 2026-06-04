@@ -1,5 +1,11 @@
 # react-template
 
+## 2.3.1
+
+### Patch Changes
+
+- [#36](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/pull/36) [`a3b802c`](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/commit/a3b802cb01e78d26d113cd452de6679ba5c9f56c) Thanks [@CraftBuiler](https://github.com/CraftBuiler)! - ci automate
+
 ## 2.3.0
 
 ### Minor Changes
