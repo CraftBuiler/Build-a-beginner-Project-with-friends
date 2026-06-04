@@ -11,7 +11,8 @@
         "preview": "vite preview",
         "format": "prettier . --write",
         "prepare": "husky",
-        "release": "changeset publish"
+        "changeset": "changeset",
+        "version": "changeset version"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": "eslint --fix",
