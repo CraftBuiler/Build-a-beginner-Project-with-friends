@@ -1,4 +1,5 @@
-name: Changeset Lint
+# .github/workflows/commitlint.yml
+name: Lint Commit Messages
 
 on:
   pull_request:
@@ -6,8 +7,7 @@ on:
       - main
 
 jobs:
-  lint:
-    name: Require Changeset
+  commitlint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -19,7 +19,6 @@ jobs:
           node-version: 22
           cache: "npm"
 
-      - run: npm ci
+      - run: npm install --save-dev @commitlint/cli @commitlint/config-conventional
 
-      - name: Check for changeset
-        run: npx changeset status --since=origin/main
+      - run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }}
