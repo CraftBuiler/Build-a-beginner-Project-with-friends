@@ -1,5 +1,5 @@
 ---
-'Atlas-here': minor
+'Atlas-here': patch
 ---
 
 add test ci
