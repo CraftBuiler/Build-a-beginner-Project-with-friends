@@ -1,5 +1,13 @@
 # react-template
 
+## [2.3.4](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/compare/v2.3.3...v2.3.4) (2026-06-05)
+
+
+### Bug Fixes
+
+* add test script ([22bc7ea](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/commit/22bc7ea8ea4edc53efa490714ec30bec64ea63b5))
+* change log categorie ([d526113](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/commit/d5261137716beb2833d392fd20f2030925fa716d))
+
 ## 2.3.3
 
 ### Patch Changes
