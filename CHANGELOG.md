@@ -1,5 +1,13 @@
 # react-template
 
+## 2.3.4
+
+### Patch Changes
+
+- ci automation (made by [@CraftBuiler](https://github.com/CraftBuiler) in [#46](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/pull/46))
+
+- fix: release ci (made by [@CraftBuiler](https://github.com/CraftBuiler) in [#47](https://github.com/CraftBuiler/Build-a-beginner-Project-with-friends/pull/47))
+
 ## 2.3.3
 
 ### Patch Changes
