@@ -123,7 +123,10 @@ const changelogFunctions = {
 
         let suffix = ''
         if (links.pull || links.commit || users) {
-            suffix = `(${users ? `made by ${users} ` : ''} in ${links.pull || links.commit})`
+            const parts = []
+            if (users) parts.push('made by ' + users)
+            if (links.pull || links.commit) parts.push('in ' + (links.pull || links.commit))
+            suffix = '(' + parts.join(' ') + ')'
         }
 
         return `\n\n- ${firstLine} ${suffix}\n${futureLines.map((l) => `  ${l}`).join('\n')}`
