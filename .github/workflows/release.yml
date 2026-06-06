@@ -32,10 +32,8 @@ jobs:
             - name: Create Release Pull Request
               id: changesets
               uses: changesets/action@v1
-              run: |
-                  VERSION="v$(node -p "require('./package.json').version")"
               with:
-                  title: 'chore(main): release $VERSION'
+                  title: 'chore(main): release new version'
                   commit: 'chore: version packages'
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -48,7 +46,8 @@ jobs:
                   VERSION="v$(node -p "require('./package.json').version")"
 
                   NOTES=$(awk '/^## /{count++; if(count==2) exit} count==1{print}' CHANGELOG.md | tail -n +2)
-
+                  git config user.name "github-actions[bot]"
+                  git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
                   git tag "$VERSION" || true
                   git push origin "$VERSION" || true
 
